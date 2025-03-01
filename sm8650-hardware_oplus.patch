@@ -1,0 +1,23 @@
+diff --git a/KeyHandler/src/org/lineageos/settings/device/KeyHandler.kt b/KeyHandler/src/org/lineageos/settings/device/KeyHandler.kt
+index 91064e6..d439854 100644
+--- a/KeyHandler/src/org/lineageos/settings/device/KeyHandler.kt
++++ b/KeyHandler/src/org/lineageos/settings/device/KeyHandler.kt
+@@ -171,11 +171,6 @@ class KeyHandler(private val context: Context) : DeviceKeyHandler {
+         return null
+     }
+ 
+-    override fun onPocketStateChanged(inPocket: Boolean) {
+-        // Do nothing
+-    }
+-
+-
+     private fun doHapticFeedback(effect: VibrationEffect?) {
+         if (vibrator != null && vibrator.hasVibrator() && effect != null) {
+             vibrator.vibrate(effect)
+@@ -252,4 +247,4 @@ class KeyHandler(private val context: Context) : DeviceKeyHandler {
+             ).getInt("last_media_level", 50) // Default to 50 if not set
+         }
+     }
+-}
+\ No newline at end of file
++}
